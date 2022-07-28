@@ -3,13 +3,13 @@ import 'package:github_searcher/domain/models/search_github_repositories.dart';
 
 class SearchResultState extends Equatable {
   final Future<SearchGitHubRepositories>? data;
-  final int? page;
+  final int page;
   final int? perPage;
   final String? search;
 
   const SearchResultState({
     this.data,
-    this.page,
+    required this.page,
     this.perPage,
     this.search,
   });

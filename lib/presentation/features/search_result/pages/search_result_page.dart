@@ -10,6 +10,15 @@ import 'package:github_searcher/presentation/features/search_result/bloc/search_
 import 'package:github_searcher/presentation/features/search_result/bloc/search_result_page_state.dart';
 import 'package:github_searcher/presentation/features/search_result/widgets/github_repo_preview.dart';
 
+class PageSwitcher extends StatelessWidget {
+  const PageSwitcher({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
 class SearchResultPage extends StatefulWidget {
   const SearchResultPage({Key? key}) : super(key: key);
   static const String navigationPath = '/searchResultPage';
@@ -56,14 +65,41 @@ class _SearchResultPageState extends State<SearchResultPage> {
                   ? const Center(
                       child: Center(child: CircularProgressIndicator()))
                   : data.hasData
-                      ? data.data?.items?.isNotEmpty == true
+                      ? data.data?.items.isNotEmpty == true
                           ? Column(
                               children: [
+                                Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    IconButton(
+                                      onPressed: () {
+                                        context
+                                            .read<SearchResultPageBloc>()
+                                            .add(
+                                              PrevPageLoadEvent(),
+                                            );
+                                      },
+                                      icon: const Icon(Icons.arrow_left),
+                                    ),
+                                    Text('${state.page}'),
+                                    IconButton(
+                                      onPressed: () {
+                                        context
+                                            .read<SearchResultPageBloc>()
+                                            .add(
+                                              NextPageLoadEvent(),
+                                            );
+                                      },
+                                      icon: const Icon(Icons.arrow_right),
+                                    ),
+                                  ],
+                                ),
                                 Expanded(
                                   child: ListView.builder(
                                     itemBuilder:
                                         (BuildContext context, int index) {
-                                      final model = data.data?.items?[index]
+                                      final model = data.data?.items[index]
                                           .toGitHubRepoPreviewModel();
 
                                       if (model != null) {
@@ -74,7 +110,7 @@ class _SearchResultPageState extends State<SearchResultPage> {
 
                                       return const Error();
                                     },
-                                    itemCount: data.data?.items?.length ?? 0,
+                                    itemCount: data.data?.items.length ?? 0,
                                   ),
                                 ),
                               ],

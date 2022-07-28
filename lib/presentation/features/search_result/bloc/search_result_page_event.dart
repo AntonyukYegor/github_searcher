@@ -1,4 +1,3 @@
-
 import 'package:equatable/equatable.dart';
 
 abstract class SearchResultEvent extends Equatable {
@@ -25,5 +24,8 @@ class PageChangedEvent extends SearchResultEvent {
   @override
   List<Object> get props => [page];
 }
+
+class NextPageLoadEvent extends SearchResultEvent {}
+class PrevPageLoadEvent extends SearchResultEvent {}
 
 class LoadDataEvent extends SearchResultEvent {}
