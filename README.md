@@ -1,16 +1,19 @@
-# github_searcher
+Тестовое задание для разработчика Flutter
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Задача
+Поиск проектов на Github, вывод результатов на экран
+Описание
+Приложение должно реализовывать следующий механизм:
+1.	Показ экрана загрузки (Splash Screen)
+2.	Показ первого экрана. На нем расположено поле ввода и кнопка «Поиск». Пользователь вводит в поле поиска текст, нажимает кнопку «Поиск». Производить валидацию по введенному тексту (не менее трёх символов).
+3.	Производится переход на следующий экран, на котором отображается ответ на запрос API Github  https://api.github.com/search/repositories?q=subject, где subject – введенный текст. Пользователю отображается спиннер
+4.	Результаты поиска выводятся на экране в виде списка карточек с информацией, спиннер скрывается. В AppBar  присутствует кнопка, нажав на которую, пользователь переходит на экран с избранными карточками. Также присутствует кнопка, по которой можно вернуться назад. При переходе назад введенное значение в текстовом поле сохраняется.
+В карточке отображается:
+•	Имя проекта 
+•	Автор
+•	Количество звезд (Stargazers)
+•	Количество просмотров (Watchers)
+•	Кнопка «добавить в избранное».
+Кнопка «добавить в избранное» отправляет данные выбранной карточки в local storage (можно использовать Hive, SharedPreferences, SQLite)
+5.	При нажатии на карточку с результатом осуществляется переход на репозиторий Github (использовать webview_flutter). Имеется возможность вернутся назад.
+6.	Нажав на кнопку «Избранное» в AppBar производится переход на экран, где отображается список  добавленных карточек. Если карточки не были добавлены, выводится сообщение. В AppBar имеется кнопка, по которой осуществляется переход назад, и кнопка, по которой очищаются все добавленные карточки. 
