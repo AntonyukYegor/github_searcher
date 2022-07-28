@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:github_searcher/domain/repositories/favourites_github_repo_repository.dart';
 import 'package:github_searcher/presentation/features/favourites/bloc/favourites_event.dart';

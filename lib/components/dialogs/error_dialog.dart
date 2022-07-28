@@ -4,9 +4,9 @@ import 'package:github_searcher/components/constants.dart';
 
 void showErrorDialog({required BuildContext context, required String error}) {
   SchedulerBinding.instance.addPostFrameCallback((_) => showDialog(
-    context: context,
-    builder: (_) => ErrorDialog(error),
-  ));
+        context: context,
+        builder: (_) => ErrorDialog(error),
+      ));
 }
 
 class ErrorDialog extends StatelessWidget {

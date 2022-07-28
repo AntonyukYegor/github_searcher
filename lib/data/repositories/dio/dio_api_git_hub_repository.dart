@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:github_searcher/data/mappers/api_github/api_github_search_repositories_response_from_dto_to_domain.dart';
 import 'package:github_searcher/data/services/dio/api_github_service.dart';
 import 'package:github_searcher/domain/models/repo_sort_and_order.dart';

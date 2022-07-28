@@ -1,59 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:github_searcher/components/constants.dart';
-import 'package:github_searcher/data/models/base_github_repo.dart';
-import 'package:github_searcher/domain/models/github_repo.dart';
+import 'package:github_searcher/data/mappers/github_repo_to_git_hub_repo.dart';
 import 'package:github_searcher/domain/repositories/favourites_github_repo_repository.dart';
-import 'package:github_searcher/presentation/common/widget/favourite_button.dart';
+import 'package:github_searcher/presentation/common/widget/favorite_checked_transparent_button.dart';
 import 'package:github_searcher/presentation/features/details/pages/details_page.dart';
 import 'package:github_searcher/presentation/features/favourites/bloc/favourites_bloc.dart';
 import 'package:github_searcher/presentation/features/favourites/bloc/favourites_event.dart';
 import 'package:github_searcher/presentation/features/favourites/bloc/favourites_state.dart';
-
-extension GitHubRepoToGitHubRepoPreviewModel on GitHubRepo {
-  GitHubRepoPreviewModel toGitHubRepoPreviewModel() => GitHubRepoPreviewModel(
-        id: id,
-        owner: owner,
-        name: name,
-        stargazers: stargazers,
-        watchers: watchers,
-        url: url,
-      );
-}
-
-extension GitHubRepoPreviewModelToDomain on GitHubRepoPreviewModel {
-  GitHubRepo toDomain() => BaseGitHubRepo(
-        id: id,
-        owner: owner,
-        name: name,
-        stargazers: stargazers,
-        watchers: watchers,
-        url: url,
-      );
-}
-
-class GitHubRepoPreviewModel {
-  const GitHubRepoPreviewModel({
-    required this.id,
-    required this.owner,
-    required this.name,
-    required this.stargazers,
-    required this.watchers,
-    required this.url,
-  });
-
-  final int id;
-
-  final String owner;
-
-  final String name;
-
-  final int stargazers;
-
-  final int watchers;
-
-  final String url;
-}
+import 'package:github_searcher/presentation/features/search_result/widgets/models/github_repo_preview_model.dart';
 
 class GitHubRepoPreview extends StatelessWidget {
   const GitHubRepoPreview({
@@ -159,7 +114,7 @@ class GitHubRepoPreview extends StatelessWidget {
                       },
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),

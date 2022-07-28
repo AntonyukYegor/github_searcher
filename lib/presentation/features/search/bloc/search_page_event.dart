@@ -1,4 +1,3 @@
-
 import 'package:equatable/equatable.dart';
 
 abstract class SearchEvent extends Equatable {
@@ -16,7 +15,6 @@ class SearchChangedEvent extends SearchEvent {
   @override
   List<Object> get props => [search];
 }
-
 
 class ValidateSearchEvent extends SearchEvent {
   final Function() onSuccess;

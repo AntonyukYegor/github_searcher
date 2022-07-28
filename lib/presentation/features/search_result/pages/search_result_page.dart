@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:github_searcher/components/constants.dart';
+import 'package:github_searcher/data/mappers/github_repo_to_git_hub_repo.dart';
 import 'package:github_searcher/domain/models/search_github_repositories.dart';
 import 'package:github_searcher/presentation/common/widget/empty.dart';
 import 'package:github_searcher/presentation/common/widget/error.dart';

@@ -6,7 +6,7 @@ extension ApiGitHubSearchRepositoriesOwnerResponseDTOFromDTOToDomain
     on ApiGitHubSearchRepositoriesRepoResponseDTO {
   GitHubRepo toDomain() {
     return BaseGitHubRepo(
-      id:  id,
+      id: id,
       owner: owner?.name ?? 'Unknow',
       stargazers: stargazers,
       url: url,

@@ -7,6 +7,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as p;
 
 part 'database.g.dart';
+
 @DriftDatabase(tables: [GitHubRepoTable])
 class Database extends _$Database {
   Database() : super(_openConnection());
@@ -28,5 +29,4 @@ class Database extends _$Database {
     var result = await query.map((row) => row.read(countExp)).getSingle();
     return result;
   }
-
 }

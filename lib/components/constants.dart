@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
 
 class AppConstants {
-  static const Color githubColor = Color.fromARGB(255, 36, 41, 47);
   static const String watchersCountTitle = 'Количество просмотров: ';
   static const String stargazersCountTitle = 'Количество звезд: ';
   static const String ownerTitle = 'Автор: ';
   static const String repositoryNameTitle = 'Имя проекта: ';
   static const String error = 'Ошибка';
   static const String unknown = 'Неизвестно';
+  static const String splashScreenTitle = 'Splash Screen';
+  static const String empty = 'Пусто';
+  static const String inputRequestTitle = 'Введите свой запрос';
+  static const String search = 'Поиск';
+  static const String searchPageTitle = 'Страница поиска';
+  static const String searchResultPageTitle = 'Результат запроса';
+  static const String favouritesPageTitle = 'Избранное';
+  static const String clearFavouritesTitle = 'Очистить избранное';
+  static const String searchRequestValidateErrorMessage =
+      'Запрос должен содержать минимум 3 символа';
+  static const String notFoundPage = 'Страница не найдена';
 
   static const MaterialColor githubBrandColor = MaterialColor(
     _darkBlackPrimaryValue,
@@ -24,18 +34,9 @@ class AppConstants {
       900: Color(0xFFFFFFFF),
     },
   );
-  static const int _darkBlackPrimaryValue = 0xA0FFFFfF;
-  static const String splashScreenTitle = 'Splash Screen';
-  static const String empty = 'Пусто';
+
+  static const Color githubColor = Color.fromARGB(255, 36, 41, 47);
 
   static const int minLettersInRequest = 3;
-
-  static const inputRequestTitle = 'Введите свой запрос';
-  static const search = 'Поиск';
-
-  static const String searchPageTitle = 'Страница поиска';
-  static const String searchResultPageTitle = 'Результат запроса';
-  static const String favouritesPageTitle = 'Избранное';
-  static const String clearFavouritesTitle = 'Очистить избранное';
-  static const String searchRequestValidateErrorMessage = 'Запрос должен содержать минимум 3 символа';
+  static const int _darkBlackPrimaryValue = 0xA0FFFFfF;
 }

@@ -1,30 +1,5 @@
 import 'package:flutter/material.dart';
 
-class FavoriteCheckedTransparentButton extends StatelessWidget {
-  const FavoriteCheckedTransparentButton(
-      {Key? key, required this.initialChecked, required this.alignment, required this.onPressed, double scale = 1})
-      : _scale = scale, super(key: key);
-
-  final bool initialChecked;
-  final Alignment alignment;
-  final void Function() onPressed;
-  final double _scale;
-
-  @override
-  Widget build(BuildContext context) {
-    return IconCheckedButton(
-      onPressed: onPressed,
-      initialChecked: initialChecked,
-      foregroundIcon: Icons.star_outline,
-      backgroundIcon: Icons.star,
-      backgroundColorUnchecked: Colors.transparent,
-      backgroundColorChecked: Colors.yellow,
-      padding: const EdgeInsets.all(16),
-      alignment: alignment,
-    );
-  }
-}
-
 class IconCheckedButton extends StatelessWidget {
   const IconCheckedButton({
     required this.onPressed,

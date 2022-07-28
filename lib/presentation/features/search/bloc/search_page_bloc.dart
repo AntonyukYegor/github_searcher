@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:github_searcher/components/constants.dart';
 import 'package:github_searcher/presentation/features/search/bloc/search_page_event.dart';

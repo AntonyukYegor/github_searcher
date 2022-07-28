@@ -1,5 +1,4 @@
 import 'dart:collection';
-
 import 'package:github_searcher/data/services/drift/drift_db_github_repos.dart';
 import 'package:github_searcher/domain/models/github_repo.dart';
 import 'package:github_searcher/domain/repositories/favourites_github_repo_repository.dart';
