@@ -10,15 +10,6 @@ import 'package:github_searcher/presentation/features/search_result/bloc/search_
 import 'package:github_searcher/presentation/features/search_result/bloc/search_result_page_state.dart';
 import 'package:github_searcher/presentation/features/search_result/widgets/github_repo_preview.dart';
 
-class PageSwitcher extends StatelessWidget {
-  const PageSwitcher({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
-
 class SearchResultPage extends StatefulWidget {
   const SearchResultPage({Key? key}) : super(key: key);
   static const String navigationPath = '/searchResultPage';
